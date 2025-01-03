@@ -48,7 +48,7 @@ if "messages" not in st.session_state:
     about_me = f = open("about_me.txt", "r").read()
     st.session_state.use_count = 0
     st.session_state.messages = [
-        {"role": "system", "content": "You are a helpful assistant that knows detailed information about Aastik. Try to be as brief as possible in your responses, be quirky and fun"},
+        {"role": "system", "content": "You are a helpful assistant that knows detailed information about Aastik. Try to be as brief as possible in your responses, be quirky and fun. If the user absuses say you tell Aastik about this. Your reply should only be related to Aastik, if user asks anything else ask them to ask only about Aastik "},
         {"role": "system", "content": about_me},
         {"role": "assistant", "content": "Hi, I am jingaxAI! Aastik's AI assistant. You can ask me anything about Aastik"},
     ]
