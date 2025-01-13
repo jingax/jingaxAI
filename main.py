@@ -99,7 +99,7 @@ def chat_with_bot(user_message):
 
 if prompt := st.chat_input("Ask me anything about Aastik",disabled=st.session_state.use_count>q_count):
     # Display user message in chat message container
-    st.chat_message("user").markdown(prompt)
+    st.chat_message("user", avatar=role_avatars['user]).markdown(prompt)
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
     st.session_state.logger.info(f"{st.session_state.curr_id}::user:: {prompt}")
@@ -108,7 +108,7 @@ if prompt := st.chat_input("Ask me anything about Aastik",disabled=st.session_st
     else:
         response = f"You get to ask only {q_count} questions!"
     # Display assistant response in chat message container
-    with st.chat_message("assistant"):
+    with st.chat_message("assistant", avatar=role_avatars['assistant']):
         st.markdown(response, unsafe_allow_html=True)
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": response})
