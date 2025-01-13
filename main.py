@@ -63,7 +63,7 @@ if "messages" not in st.session_state:
 
 
 gif_url = "https://raw.githubusercontent.com/jingax/jingaxAI/refs/heads/main/images/askc.gif"
-gif_html = f'<img src="{gif_url}" alt="GIF" width="250">'
+gif_html = f'<img src="{gif_url}" alt="GIF" width="265">'
 
 # Display the GIF without any role
 
