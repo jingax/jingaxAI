@@ -71,7 +71,8 @@ gif_html = f'<img src="{gif_url}" alt="GIF" width="400">'
 for message in st.session_state.messages[2:]:
     with st.chat_message(message["role"], avatar=role_avatars[message["role"]]):
         st.markdown(message["content"])
-        st.markdown(gif_html, unsafe_allow_html=True)
+        if len(st.session_state.messages)==3:
+            st.markdown(gif_html, unsafe_allow_html=True)
 
  
 
