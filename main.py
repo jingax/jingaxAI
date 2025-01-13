@@ -42,8 +42,8 @@ else:
 q_count =10
 
 role_avatars = {
-    "user": "https://jingax.github.io/images/chill.jpeg", 
-    "assistant": "https://jingax.github.io/images/jinga.png",
+    "user": "images/chill.jpeg", 
+    "assistant": "images/jinga.png",
 }
 # Initialize chat history
 
