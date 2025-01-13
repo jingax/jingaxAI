@@ -40,7 +40,13 @@ else:
     pass
     # st.write('<style>div.block-container{padding-top:-2rem;}</style>', unsafe_allow_html=True)
 q_count =10
+
+role_avatars = {
+    "user": "https://jingax.github.io/images/chill.jpeg", 
+    "assistant": "https://jingax.github.io/images/jinga.png",
+}
 # Initialize chat history
+
 if "messages" not in st.session_state:
     st.session_state.logger = get_logger(__name__)
     st.session_state.curr_id = f"{random.randint(10000, 99999)}-{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
@@ -59,7 +65,7 @@ if "messages" not in st.session_state:
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages[2:]:
-    with st.chat_message(message["role"]):
+    with st.chat_message(message["role"], avatar=role_avatars[message["role"]]):
         st.markdown(message["content"])
 
  
