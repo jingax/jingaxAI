@@ -91,7 +91,7 @@ for message in st.session_state.messages[2:]:
     with st.chat_message(message["role"], avatar=role_avatars[message["role"]]):
         st.markdown(message["content"])
         if st.session_state.gif:
-            st.markdown(gif_html, unsafe_allow_html=True)
+            st.components.v1.html(gif_html, height=300)
             st.session_state.gif = False
 
  
