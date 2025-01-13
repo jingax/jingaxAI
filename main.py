@@ -70,7 +70,7 @@ gif_html = f'<img src="{gif_url}" alt="GIF" width="275">'
 # Display chat messages from history on app rerun
 for message in st.session_state.messages[2:]:
     with st.chat_message(message["role"], avatar=role_avatars[message["role"]]):
-        st.markdown(message["content"])
+        st.markdown(message["content"], unsafe_allow_html=True)
         if st.session_state.gif:
             st.markdown(gif_html, unsafe_allow_html=True)
             st.session_state.gif = False
