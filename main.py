@@ -62,7 +62,7 @@ if "messages" not in st.session_state:
     st.session_state.client = openai.OpenAI(api_key = st.secrets['api']['openai'])
 
 
-gif_url = "images/askc.gif"
+gif_url = "https://raw.githubusercontent.com/jingax/jingaxAI/refs/heads/main/images/askc.gif"
 gif_html = f'<img src="{gif_url}" alt="GIF" width="400">'
 
 # Display the GIF without any role
