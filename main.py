@@ -99,7 +99,7 @@ def chat_with_bot(user_message):
 
 if prompt := st.chat_input("Ask me anything about Aastik",disabled=st.session_state.use_count>q_count):
     # Display user message in chat message container
-    st.chat_message("user", avatar=role_avatars['user]).markdown(prompt)
+    st.chat_message("user", avatar=role_avatars['user']).markdown(prompt)
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
     st.session_state.logger.info(f"{st.session_state.curr_id}::user:: {prompt}")
