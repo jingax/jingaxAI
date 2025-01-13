@@ -62,8 +62,27 @@ if "messages" not in st.session_state:
     st.session_state.client = openai.OpenAI(api_key = st.secrets['api']['openai'])
 
 
-gif_url = "https://media.giphy.com/media/3oEduJkz3g7mTnGvGk/giphy.gif"
-gif_html = f'<img src="{gif_url}" alt="GIF" width="400">'
+gif_html = """<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<p id='app'></p>
+<script>
+var app = document.getElementById('app');
+
+var typewriter = new Typewriter(app, {
+  loop: true,
+  delay: 75,
+});
+
+typewriter
+  .typeString('<strong>Ask me</strong> to show Aastik\'s photos')
+  .pauseFor(300)
+  .deleteChars(23)
+  .typeString(' about his resume')
+  .pauseFor(300)
+  .deleteChars(10)
+  .typeString(' his skills')
+  .pauseFor(300)
+  .start();
+</script>"""
 
 # Display the GIF without any role
 
