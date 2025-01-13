@@ -58,7 +58,7 @@ if "messages" not in st.session_state:
         {"role": "system", "content": about_me},
         {"role": "assistant", "content": "Hi, I am jingaxAI! Aastik's AI assistant. You can ask me anything about Aastik"},
     ]
-    
+    st.session_state.gif = True
     st.session_state.client = openai.OpenAI(api_key = st.secrets['api']['openai'])
 
 
@@ -71,8 +71,9 @@ gif_html = f'<img src="{gif_url}" alt="GIF" width="400">'
 for message in st.session_state.messages[2:]:
     with st.chat_message(message["role"], avatar=role_avatars[message["role"]]):
         st.markdown(message["content"])
-        if len(st.session_state.messages)==3:
+        if st.session_state.gif:
             st.markdown(gif_html, unsafe_allow_html=True)
+            st.session_state.gif = False
 
  
 
