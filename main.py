@@ -42,7 +42,7 @@ else:
 q_count =10
 
 role_avatars = {
-    "user": "images/chill.jpeg", 
+    "user": "images/chill.jpg", 
     "assistant": "images/jinga.png",
 }
 # Initialize chat history
