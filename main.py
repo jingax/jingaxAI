@@ -62,11 +62,16 @@ if "messages" not in st.session_state:
     st.session_state.client = openai.OpenAI(api_key = st.secrets['api']['openai'])
 
 
+gif_url = "https://media.giphy.com/media/3oEduJkz3g7mTnGvGk/giphy.gif"
+gif_html = f'<img src="{gif_url}" alt="GIF" width="400">'
+
+# Display the GIF without any role
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages[2:]:
     with st.chat_message(message["role"], avatar=role_avatars[message["role"]]):
         st.markdown(message["content"])
+        st.markdown(gif_html, unsafe_allow_html=True)
 
  
 
