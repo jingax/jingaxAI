@@ -112,7 +112,10 @@ if prompt := st.chat_input("Ask me anything about Aastik",disabled=st.session_st
     st.session_state.messages.append({"role": "user", "content": prompt})
     st.session_state.logger.info(f"{st.session_state.curr_id}::user:: {prompt}")
     if st.session_state.use_count <q_count :
-        response = chat_with_bot(prompt)
+        try:
+            response = chat_with_bot(prompt)
+        except:
+            response = "I have issues, I'll ask Aastik to fix me! Please come back later"
     else:
         response = f"You get to ask only {q_count} questions!"
     # Display assistant response in chat message container
