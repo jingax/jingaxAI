@@ -124,4 +124,4 @@ if prompt := st.chat_input("Ask me anything about Aastik",disabled=st.session_st
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": response})
     st.session_state.logger.info(f"{st.session_state.curr_id}::jinga-ai:: {response}")
-print(st.session_state.messages)
+    print(st.session_state.messages)
