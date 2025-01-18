@@ -114,8 +114,9 @@ if prompt := st.chat_input("Ask me anything about Aastik",disabled=st.session_st
     if st.session_state.use_count <q_count :
         try:
             response = chat_with_bot(prompt)
-        except:
+        except Exception as e:
             response = "I have issues, I'll ask Aastik to fix me! Please come back later"
+            print(e)
     else:
         response = f"You get to ask only {q_count} questions!"
     # Display assistant response in chat message container
