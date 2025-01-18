@@ -116,7 +116,7 @@ if prompt := st.chat_input("Ask me anything about Aastik",disabled=st.session_st
             response = chat_with_bot(prompt)
         except Exception as e:
             response = "I have issues, I'll ask Aastik to fix me ❤️‍🩹"
-            st.write(e)
+            # st.write(e)
     else:
         response = f"You get to ask only {q_count} questions!"
     # Display assistant response in chat message container
