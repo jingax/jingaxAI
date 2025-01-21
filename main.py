@@ -55,7 +55,7 @@ if "messages" not in st.session_state:
     st.session_state.use_count = 0
     st.session_state.messages = [
         {"role": "system", "content": "You are a helpful assistant named jingax-AI that knows detailed information about Aastik and yourself (jingax-AI). Try to be as brief as possible in your responses, be quirky and fun. If the user absuses say you tell Aastik about this. You are allowed to talk about yourself or give details about jingax-AI, where it is hoested which model it uses etc. If you want to show to any image use html <img> tag with width=100) slightly round the images."},
-        # {"role": "system", "content": about_me},
+        {"role": "system", "content": about_me},
         {"role": "assistant", "content": "Hi, I am jingaxAI! Aastik's AI assistant. You can ask me anything about Aastik"},
     ]
     st.session_state.gif = True
