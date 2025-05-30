@@ -59,7 +59,7 @@ To personalize JingaxAI for someone else:
 
    Example:
    ```
-   My name is John Doe. I graduated from MIT in Computer Science...
+   My name is Ram. I graduated from IIT Bombay in Computer Science...
    ```
 
 3. Save the file. The chatbot will automatically use the new content — no other changes are necessary.
