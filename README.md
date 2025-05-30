@@ -2,7 +2,7 @@
 
 JingaxAI is an interactive AI chatbot designed to answer questions about you, providing insights into your background, skills, projects, and more. Hosted within an iframe on your portfolio site, it offers visitors a personalized conversational experience.
 ---
-I have it currently hosted on portfolio [here](https://jingax.github.io/). Do check check out!
+I have it currently hosted on my portfolio [here](https://jingax.github.io/). Do check check out!
 
 ## ⚙️ Setup and Installation
 
